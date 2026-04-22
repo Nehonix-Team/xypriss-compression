@@ -1,7 +1,7 @@
 {
   "name": "xypriss-compression",
   "version": "1.0.0",
-  "description": "Custom compression middleware for XyPriss with strict algorithm enforcement",
+  "description": "High-performance cross-platform Go-based compression engine for the XyPriss framework",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "keywords": [
@@ -34,7 +34,6 @@
   "dependencies": {
     "bytes": "^3.1.2",
     "compressible": "^2.0.18",
-    "debug": "^2.6.9",
     "on-headers": "^1.1.0",
     "vary": "^1.1.2"
   },

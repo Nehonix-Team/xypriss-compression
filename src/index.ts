@@ -169,7 +169,7 @@ export function compression(options: CompressionOptions = {}) {
 
       const ext = process.platform === "win32" ? ".exe" : "";
       const binName = `xlibc-${process.platform}-${process.arch}${ext}`;
-      const cliPath = path.join(__dirname, "..", "dist", binName);
+      const cliPath = path.join(__dirname, "..", "bin", binName);
       const args = ["-algo", method];
       if (level !== undefined) {
         args.push("-level", String(level));

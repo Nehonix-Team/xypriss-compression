@@ -9,7 +9,7 @@ const archName = process.arch;
 const ext = osName === "win32" ? ".exe" : "";
 const binName = `xlibc-${osName}-${archName}${ext}`;
 
-const distDir = path.resolve(__dirname, "../dist");
+const distDir = path.resolve(__dirname, "../bin");
 const outPath = path.join(distDir, binName);
 
 if (!fs.existsSync(distDir)) {
@@ -102,7 +102,7 @@ async function install() {
   // Fallback
   console.log("Attempting to build from source as fallback...");
   try {
-    execSync(`go build -o "../dist/${binName}" main.go`, {
+    execSync(`go build -o "../bin/${binName}" main.go`, {
       cwd: path.resolve(__dirname, "../lib"),
       stdio: "inherit",
     });

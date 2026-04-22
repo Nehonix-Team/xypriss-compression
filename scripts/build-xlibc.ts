@@ -14,7 +14,7 @@ const targets = [
 ];
 
 const libDir = path.resolve(__dirname, "../lib");
-const distDir = path.resolve(__dirname, "../dist");
+const distDir = path.resolve(__dirname, "../bin");
 
 if (!fs.existsSync(distDir)) {
   fs.mkdirSync(distDir, { recursive: true });
