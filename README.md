@@ -27,13 +27,14 @@ To completely circumvent the constraints of the V8 JavaScript execution environm
 - **Cross-Platform Native Distribution**: Dynamically engineered via an advanced `postinstall` resolution system. The environment seamlessly identifies the execution platform (Linux, Darwin, Windows) and architecture (arm64, x64), automatically resolving the native `xlibc` executable via Content Addressable remote storage (GitHub Releases). Ensure frictionless deployments without enforcing the presence of a Golang compiler onto the destination client machine.
 - **Zero-Dependency Core Configuration**: The public programmatic API surfaces retain one-to-one compliance with conventional Node.js methodologies. The integration is operationally translucent.
 - **Hardware Agnostic**: Full compatibility with legacy and modern virtualization layers.
+- **Security Hardened Architecture**: All critical header manipulation dependencies (`on-headers`, `vary`) have been internalized, ported to TypeScript, and audited to eliminate third-party supply chain risks.
 
 ## Installation Parameters
 
 Deployments are strictly monitored via the XyPriss Package Manager.
 
 ```sh
-xfpm add xypriss-compression-plugin
+xfpm add xypriss-compression
 ```
 
 During installation, the cross-platform resolution script retrieves the pre-compiled `xlibc` component suitable for the localized machine geometry, placing the operational binary safely inside the `dist` directory context.
@@ -44,7 +45,7 @@ Integrate the engine into the HTTP workflow as normal.
 
 ```typescript
 import http from "http";
-import compression from "xypriss-compression-plugin";
+import compression from "xypriss-compression";
 
 const compressFilter = compression({
   algorithms: ["br", "gzip", "deflate"],

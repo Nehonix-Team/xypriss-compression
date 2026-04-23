@@ -15,12 +15,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "types": ["node"],
-    "baseUrl": ".",
-    "paths": {
-      "on-headers": ["pkgs/xypriss-on-headers/index.ts"],
-      "xypriss-vary": ["pkgs/xypriss-vary/index.ts"]
-    }
+    "baseUrl": "."
   },
-  "include": ["src/**/*", "pkgs/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
